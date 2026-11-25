@@ -8,28 +8,75 @@
 </head>
 <body>
 	<header class="site-header">
-	<nav>
-	  <a href="#" class="logo">Orbit</a>
-
-	  <ul class="nav-links">
-	    <li><a href="#">Home</a></li>
-	    <li><a href="#courses">Courses</a></li>
-	    <li><a href="#resources">Resources</a></li>
-	  </ul>
-	</nav>
-	<button>Sign in</button>
+		<nav class="navbar container">
+			<div class="brand">
+				<img src="" alt="" class="">
+				<a href="#home" class="logo">Orbit</a>
+			</div>
+			<ul class="nav-links">
+				<li><a href="#home">Launchpad</a></li>
+				<li><a href="#courses">Missions</a></li>
+				<li><a href="#explore">Explore</a></li>
+				<li><a href="#video">Watch</a></li>
+			</ul>
+			<a href="login.html" class="btn">Board Ship</a>
+		</nav>
 	</header>
-	<div class="content">
-		<main>
-			<section class="hero">
+	<main class="content">
+		<section class="hero " id="hero">
+			<img src="assets/images/hero.png">
+			<div class="hero-inner container">
 				<div class="hero-text">
-					<h2>Learning mission control</h2>
-					<p>Courses, tutorials and study material in one place.</p>
-					<button>Browse Courses</button>
+					<h1>Learning mission control</h1>
+					<p>Every course, tutorial and study guide you need, mapped
+					out like a flight plan so you always know your next move.
+					</p>
+					<a href="#courses" class="btn">Browse courses</a>
 				</div>
-				<img src="">
-			</section>
-		</main>
-	</div>
+			</div>
+		</section>
+		<section class="courses container" id="courses">
+			<h2>Choose your mission</h2>
+			<div class="card-list">
+				<div class="card">
+					<img src="assets/images/solar-system.jpg">
+					<div class="card-text">
+						<h3>Solar System 101</h3>
+						<p>Tour the sun, eight planets and their moons.</p>
+						<button class="btn">Start here</button>
+					</div>
+				</div>
+				<div class="card">
+					<img src="assets/images/rocket.jpg">
+					<div class="card-text">
+						<h3>Rockets and Spaceflight</h3>
+						<p>From launch to orbit, how we leave Earth.</p>
+						<button class="btn">Open</button>
+					</div>
+				</div>
+				<div class="card">
+					<img src="assets/images/galaxy.jpg">
+					<div class="card-text">
+						<h3>Stars and Galaxies</h3>
+						<p>How stars are born, live and die.</p>
+						<button class="btn">Open</button>
+					</div>
+				</div>
+				<div class="card">
+					<img src="assets/images/gazing.jpg">
+					<div class="card-text">
+						<h3>Stargazing Basics</h3>
+						<p>Find planets and constellations by eye.</p>
+						<button class="btn">Open</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="site-footer">
+		<div class="container">
+			<p>Bye bye</p>
+		</div>
+	</footer>
 </body>
 </html>
