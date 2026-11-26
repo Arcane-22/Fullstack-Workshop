@@ -4,8 +4,7 @@
 	--text: #ecebff;
 	--muted: #b8b8dc;
 	--bg: #070712;
-	--nav-bg: #101020;
-	--footer-bg: #05050e;
+	--secondary-bg: #101020;
 	--surface: #0e0e1c;
 	--border: #21212e;
 	--font: Arial, sans-serif;
@@ -30,7 +29,11 @@ body {
 }
 
 section {
-    padding-block: 2rem;
+    padding-block: 3rem;
+}
+
+section h2 {
+    margin-bottom: 1.5rem;
 }
 
 a{
@@ -69,10 +72,6 @@ button{
 	cursor: pointer;
 }
 
-section h2 {
-    margin-bottom: 1.5rem;
-}
-
 .btn {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -99,17 +98,13 @@ section h2 {
 	padding-inline: 2rem;
 }
 
-.content {
-    padding-top: 40px;
-}
-
 .site-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: var(--nav-bg);
+    background: var(--secondary-bg);
 }
 
 .navbar{
@@ -157,7 +152,8 @@ section h2 {
 .hero {
     position: relative;
     width: 100%;
-    height: calc(100vh - 10px);
+    height:100vh;
+    padding-block: 0;
 }
 
 .hero::before {
@@ -165,7 +161,6 @@ section h2 {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.6);
-    height: calc(100vh - 42px);
 }
 
 .hero img {
@@ -214,9 +209,9 @@ section h2 {
 }
 
 .card img {
-    width: 250px;
+    width: 15.625rem; 
+    height: 12.5rem;   
     object-fit: cover;
-    height: 200px;
 }
 
 .card-text{
@@ -229,8 +224,23 @@ section h2 {
 
 .card-text .btn{
 	margin-top: auto;          
-	align-self: flex-end;        
+	align-self: flex-end;       
+} 
 
 .site-footer{
-	background: var(--footer-bg);
+	background: var(--secondary-bg);
+	padding-block: 2rem;
+}
+
+.footer-text{
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-brand{
+	padding-block: 0;
+}
+
+.footer-contact{
+	padding-block: 0;
 }
