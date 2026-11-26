@@ -29,6 +29,7 @@ body {
 }
 
 section {
+	scroll-margin-top: 3rem;
     padding-block: 3rem;
 }
 
@@ -39,7 +40,8 @@ section h2 {
 a{
 	text-decoration: none;
 	color: var(--text);
-	transition: all 0.3s;
+	transition: color 0.5s;
+	cursor: pointer;
 }
 
 a:hover{
@@ -72,6 +74,11 @@ button{
 	cursor: pointer;
 }
 
+address{
+	font-style: normal;
+}
+
+
 .btn {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -82,8 +89,7 @@ button{
     border: none;
     border-radius: 2rem;
     font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .btn:hover{
@@ -202,7 +208,7 @@ button{
 }
 
 .card{
-	width: calc(50% - 1rem);
+	width: calc(50% - 0.75rem);
 	display: flex;
 	border:1px solid var(--border);
 	background: var(--surface);
@@ -227,6 +233,103 @@ button{
 	align-self: flex-end;       
 } 
 
+.explore-text{
+	margin-bottom: 1.5rem;
+}
+
+.topic-grid{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+}
+
+.topic{
+    display: block;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: transform 0.25s ease;
+}
+
+.topic:hover{
+    transform: translateY(-8px);
+}
+
+.topic img{
+	width: 100%;
+	aspect-ratio: 3/2;
+	object-fit: cover;
+
+	margin-bottom: 1rem;
+}
+
+.topic h3{
+	margin-bottom: 0.25rem;
+}
+
+.deck-layout{
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 1.5rem;
+	align-items: start;
+}
+
+.panel{
+	padding: 1.5rem;
+	border: 1px solid var(--border);
+	border-radius: 1rem;
+	background: var(--surface);
+}
+
+.deck-layout .panel h3{
+	margin-bottom: 0.5rem;
+}
+
+figure video,
+figure img{
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	border-radius: 0.5rem;
+	background: #000;
+}
+
+figcaption{
+	margin-block: 0.5rem 1.25rem;
+	font-size: 0.8rem;
+	color: var(--muted);
+}
+
+.deck-side{
+	display: grid;
+	gap: 1.5rem;
+}
+
+.panel audio{
+	width: 100%;
+}
+
+.announcements{
+	display: grid;
+	gap: 0.75rem;
+	margin-top: 0.75rem;
+	font-size: 0.95rem;
+}
+
+.announcements li{
+	display: grid;
+	grid-template-columns: 6rem 1fr;
+	gap: 1rem;
+}
+
+.announcements strong{
+	color: var(--accent);
+}
+
+.announcements span{
+	color: var(--muted);
+}
+
 .site-footer{
 	background: var(--secondary-bg);
 	padding-block: 2rem;
@@ -241,6 +344,134 @@ button{
 	padding-block: 0;
 }
 
+.footer-logo{
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
 .footer-contact{
 	padding-block: 0;
+}
+
+
+/*Responsive css*/
+
+/* Tablet: 1024px and below */
+@media (max-width: 1024px){
+	.card{
+		width: 100%;
+	}
+
+	.topic-grid{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.deck-layout{
+		grid-template-columns: 1fr;
+	}
+
+	.deck-side{
+		grid-template-columns: 1fr 1fr;
+		align-items: start;
+	}
+
+	.footer-text{
+		flex-wrap: wrap;
+		gap: 2rem;
+	}
+
+	.footer-text > *{
+		flex: 1 1 40%;
+	}
+}
+
+/* Mobile: 768px and below */
+@media (max-width: 768px){
+	.container{
+		padding-inline: 1rem;
+	}
+
+	section{
+		padding-block: 2rem;
+		scroll-margin-top: 7.5rem;
+	}
+
+	h1{ font-size: 1.75rem; }
+	h2{ font-size: 1.375rem; }
+
+
+	.navbar{
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		padding-block: 0.75rem;
+	}
+
+	.nav-links{
+		order: 3;
+		width: 100%;
+		justify-content: space-between;
+		gap: 0.25rem;
+	}
+
+	.nav-links a{
+		padding: 0.5rem;
+		font-size: 0.9rem;
+	}
+
+	.hero-text{
+		gap: 1.5rem;
+		padding-inline: 1rem;
+	}
+
+	.hero-text h1,
+	.hero-text p{
+		max-width: 100%;
+	}
+
+	.card{
+		flex-direction: column;
+	}
+
+	.card img{
+		width: 100%;
+		height: 12.5rem;
+	}
+
+	.card-text{
+		padding: 1.25rem;
+	}
+
+	.deck-side{
+		grid-template-columns: 1fr;
+	}
+
+	.announcements li{
+		grid-template-columns: 5rem 1fr;
+	}
+
+	/* Footer */
+	.footer-text{
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+}
+
+/* Small phones: 480px and below */
+@media (max-width: 480px){
+	.topic-grid{
+		grid-template-columns: 1fr;
+	}
+
+	.nav-links a{
+		padding: 0.5rem 0.25rem;
+		font-size: 0.8rem;
+	}
+
+	.panel{
+		padding: 1rem;
+	}
+
+	.hero{
+		min-height: 32rem;
+	}
 }

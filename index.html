@@ -10,8 +10,7 @@
 	<header class="site-header">
 		<nav class="navbar container">
 			<div class="brand">
-				<img src="" alt="" class="">
-				<a href="#home" class="logo">Orbit</a>
+				<a href="#hero" class="logo"><img src="assets/images/logo.svg" alt="Orbit logo">Orbit</a>
 			</div>
 			<ul class="nav-links">
 				<li><a href="#hero">Launchpad</a></li>
@@ -24,7 +23,7 @@
 	</header>
 	<main class="content">
 		<section class="hero " id="hero">
-			<img src="assets/images/hero.png">
+			<img src="assets/images/hero.png" alt="Earth seen from space at night, with city lights glowing along the curved horizon">
 			<div class="hero-inner container">
 				<div class="hero-text">
 					<h1>Learning mission control</h1>
@@ -72,18 +71,102 @@
 				</div>
 			</div>
 		</section>
+		<section class="container" id="explore">
+			<div class="explore-text">
+				<h2>Explore the Universe</h2>
+				<p>Planets, moons, stars, galaxies and more. Pick a topic to start exploring.</p>
+			</div>
+			<div class="topic-grid">
+				<a href="#" class="topic">
+					<img src="assets/images/planets.jpg" alt="">
+					<h3>Planets</h3>
+					<p>The eight worlds of our solar system.</p>
+				</a>
+				<a href="#" class="topic">
+					<img src="assets/images/moons.jpg" alt="">
+					<h3>Moons</h3>
+					<p>Natural satellites, from Luna to Europa.</p>
+				</a>
+				<a href="#" class="topic">
+					<img src="assets/images/stars.jpg" alt="">
+					<h3>Stars</h3>
+					<p>How they form, shine and fade.</p>
+				</a>
+				<a href="#" class="topic">
+					<img src="assets/images/galaxies.jpg" alt="">
+					<h3>Galaxies</h3>
+					<p>Billions of stars bound by gravity.</p>
+				</a>
+				<a href="#" class="topic">
+					<img src="assets/images/black-holes.jpg" alt="">
+					<h3>Black Holes</h3>
+					<p>Where gravity is so strong light can't escape.</p>
+				</a>
+				<a href="#" class="topic">
+					<img src="assets/images/comets.jpg" alt="">
+					<h3>Comets and Asteroids</h3>
+					<p>Icy and rocky leftovers from the early solar system.</p>
+				</a>
+			</div>
+		</section>
+		<section class="container" id="video">
+			<div class="deck-layout">
+
+				<div class="deck-main">
+					<h2>Flight deck: today's briefing</h2>
+
+					<article class="panel">
+						<figure>
+						<video controls poster="assets/images/poster.jpg">
+						    <source src="assets/video/launch.mp4" type="video/mp4">
+						    Your browser does not support HTML video.
+						</video>
+							<figcaption>Rockets and Spaceflight, lesson 1</figcaption>
+						</figure>
+
+						<h3>How rockets reach orbit</h3>
+						<p>A short introduction to gravity, thrust and how rockets reach orbit.</p>
+					</article>
+				</div>
+
+				<aside class="deck-side">
+					<div class="panel">
+						<h3>Cosmic Corner</h3>
+						<figure>
+							<img src="assets/images/audio.jpg" alt="A deep field view of distant galaxies glowing in golden and blue light across the universe">
+							<figcaption>A glimpse into the distant universe, where ancient light reveals the cosmos as it once was.</figcaption>
+						</figure>
+						<audio controls>
+						    <source src="assets/audio/audio.mp3" type="audio/mpeg">
+						    Your browser does not support HTML audio.
+						</audio>
+					</div>
+
+					<div class="panel">
+						<h3>Announcements</h3>
+						<ul class="announcements">
+							<li><strong>Dec 13-14</strong><span>Geminid meteor shower peaks</span></li>
+							<li><strong>Dec 21</strong><span>December solstice, the shortest day in the north</span></li>
+							<li><strong>Dec 21-22</strong><span>Ursid meteor shower peaks</span></li>
+							<li><strong>New</strong><span>Lesson: Staying in orbit</span></li>
+						</ul>
+					</div>
+				</aside>
+
+			</div>
+		</section>
 	</main>
 	<footer class="site-footer">
 		<div class="container footer-text">
 			<section class="footer-brand">
-				<a class="footer-logo">Orbit</a>
+				<a href="#hero" class="footer-logo">Orbit</a>
 				<p>Free space learning, all in one orbit</p>
 			</section>
 	        <nav class="footer-nav" aria-label="Navigate">
 	            <h3>Navigate</h3>
 	            <ul>
-	                <li><a href="#launchpad">Launchpad</a></li>
-	                <li><a href="#missions">Missions</a></li>
+	                <li><a href="#hero">Launchpad</a></li>
+	                <li><a href="#courses">Missions</a></li>
 	                <li><a href="#explore">Explore</a></li>
 	            </ul>
 	        </nav>
@@ -100,7 +183,7 @@
 
 	            <address>
 	                <a href="mailto:info@orbit.edu.np">
-	                    info@.orbit.edu.np
+	                    info@orbit.edu.np
 	                </a>
 	                <p>Mon to Fri, 9am to 5pm</p>
 	            </address>
